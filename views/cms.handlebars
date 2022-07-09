@@ -1,0 +1,18 @@
+<div class="text-center">
+  <p>{{cmss.title}} Posted by: {{cmss.user.name}} on {{  format_date cmss.date_created}}</p>
+  <p>
+     <span class="col-md-12">{{cmss.content}}</span>
+  </p>
+
+      <form class="form signup-form">
+      <div class="form-group">
+        <label for="comment-submit"></label>
+        <input class="form-input" type="text" id="comment-submit" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
+
+</div>
+<script src="./js/submit-comment.js"></script>
