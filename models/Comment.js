@@ -22,7 +22,7 @@ Comment.init(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     cms_id: {
       type: DataTypes.INTEGER,

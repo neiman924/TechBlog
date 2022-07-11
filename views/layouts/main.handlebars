@@ -16,10 +16,9 @@
         <a href="/">The Tech Blog</a>
       </h1>
       <nav>
-        <button class="no-button" id="Home">Home</button>|
-        <button class="no-button" id="Dashboard">Dashboard</button>|
+        <a class="no-button" id="Home" href="/">Home</a>|
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
+        <a href="/profile">Dashboard</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>

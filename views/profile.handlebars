@@ -5,20 +5,16 @@
 </div>
 
 <div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Project:</h3>
+  <div class="col-md-5">
+    <h3>Create a New Post:</h3>
 
     <form class="form new-project-form">
       <div class="form-group">
-        <label for="project-name">project name:</label>
+        <label for="project-name">Title:</label>
         <input class="form-input" type="text" id="project-name" name="project-name" />
       </div>
       <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
-      </div>
-      <div class="form-group">
-        <label for="project-desc">description:</label>
+        <label for="project-desc">Content:</label>
         <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
       </div>
       <div class="form-group">
@@ -27,22 +23,23 @@
     </form>
   </div>
 
-  {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
+   {{#if cms.length}}
+    <div class="col-md-7 project-list">
+      <h3>Current Posts :</h3>
 
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+      {{#each cms as |cms|}}
+      <div class="row mb-2">
+        <div class="col-md-8">
+          <h6><a href="/cms/{{cms.id}}">{{cms.title}} Posted on {{format_date cms.date_created}}</a></h6>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-sm btn-danger" data-id="{{cms.id}}">DELETE</button>
+        </div>
       </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
+      {{/each}}
     </div>
-    {{/each}}
-  </div>
-  {{/if}}
+   {{/if}}
+
 </div>
 
 <script src="./js/profile.js"></script>
