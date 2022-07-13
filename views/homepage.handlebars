@@ -4,12 +4,17 @@
       <div class="col-md-12">
           <!-- Call helper function with triple brackets to render the emoji span as HTML -->
         <a href="/cms/{{cms.id}}">
-          <h6>{{cms.title}} Posted by: {{cms.user.name}} on {{format_date cms.date_created}}</h6>
+          <h6>{{cms.title}} Posted by: {{cms.user.name}} on {{format_date cms.date_created}} 
+
+          </h6>
         </a>
           <span class="col-md-12">{{cms.content}}</span>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-12">
         <p>
+           {{#if cms.comments}} 
+             <a href="/cms/{{cms.id}}"><p class="mark">Comments {{cms.comments.length}} </p></a>
+           {{/if}}  
         </p>
       </div>
     </div>

@@ -19,11 +19,14 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const cmss = cmsData.map((cms) => cms.get({ plain: true }));
+    //const comLenght = cmss.comments.lenght;
+    console.log(cmss);
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
       cmss, 
-      logged_in: req.session.logged_in 
+      logged_in: req.session.logged_in,
+      name: req.session.name,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -46,9 +49,12 @@ router.get('/cms/:id', async (req, res) => {
     });
 
     const cmss = cmsData.get({ plain: true });
+    const comments = cmss.comments;
+    // console.log('test :',comments);
+    // console.log('test 2:',cmss);
 
     res.render('cms', {
-      cmss,
+      cmss,comments,
       logged_in: req.session.logged_in
     });
   } catch (err) {

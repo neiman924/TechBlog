@@ -1,18 +1,37 @@
 
-<div class="text-center">
+<div>
 
-  <p><h6 style="color: #065b83;">{{cmss.title}} Posted on : {{  format_date cmss.date_created}}</p></h6>
+  <p><h6 style="color: #065b83;">Posted on : {{  format_date cmss.date_created}} by {{cmss.user.name}} | {{cmss.title}} </p></h6>
   <p><span class="col-md-12">{{cmss.content}}</span></p>
-
+{{#if comments.length}}
+<p class="commets">Comments:</p>
+{{/if}}  
+  {{#each comments as |comment| }}
+    <div class="row mb-4 project">
+      <div class="col-md-12">
+          <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+        
+          <h6>Posted by: {{comment.name}} on {{format_date comment.date_created}}</h6>
+        
+          <span class="col-md-12">{{comment.comment}}</span>
+      </div>
+      <div class="col-md-7">
+        <p>
+        </p>
+      </div>
+    </div>
+{{/each}}
+{{#if logged_in}}
   <form class="form new-comemnt-form">
         <div class="form-group">
           <label for="comment-submit"></label>
           <input class="form-input" type="text" id="comment-submit" />
         </div>
         <div class="form-group">
-          <button class="btn btn-primary" type="submit" id="s1" value="{{cmss.id}}">Submit</button>
+          <button style="display: inline;" class="btn btn-primary" type="submit" id="s1" value="{{cmss.id}}" >Submit</button>
         </div>
   </form>
-
+{{/if}}
 </div>
 <script src="../js/submit-comment.js"></script>
+ 
