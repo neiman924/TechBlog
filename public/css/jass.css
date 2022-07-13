@@ -79,9 +79,9 @@ a {
 abbr[title] {
   border-bottom: none;
   /* 1 */
-  text-decoration: underline;
+  text-decoration: none;
   /* 2 */
-  text-decoration: underline dotted;
+  text-decoration: none dotted;
   /* 2 */
 }
 
@@ -426,7 +426,7 @@ a {
 
 a:hover {
   color: #065b83;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* HEIGHT / WIDTH UTILS */

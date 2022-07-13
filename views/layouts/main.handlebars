@@ -10,22 +10,22 @@
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
+  <div class="flex-column justify-space-around header">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
         <a href="/">Tech Blog {{#if logged_in}} | Hi {{name}} {{/if}}</a>
       </h1>
       <nav>
-        <a class="no-button" id="Home" href="/">Home</a>|
+        <a class="no-button" id="Home" href="/">Home</a> |
         {{#if logged_in}}
         <a href="/profile">Dashboard</a> |
-        <button class="no-button" id="logout">logout</button>
+        <button class="no-button header" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
       </nav>
     </header>
-    <main class="container container-fluid mt-5">
+    <main class="card container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>

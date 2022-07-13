@@ -1,7 +1,13 @@
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
-
+body {
+  background-color:	rgb(255, 241, 241);
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
 .no-button {
   background: none;
   border: none;
@@ -11,10 +17,12 @@ header, .project:not(:last-child) {
   text-decoration: none;
   font-size: 100%;
 }
-
+.header {
+  font-weight: bold;
+  text-decoration: none;
+}
 .no-button:hover {
   color: #065b83;
-  text-decoration: underline;
 }
 
 .dollar-amount {
@@ -28,9 +36,33 @@ header, .project:not(:last-child) {
   font-weight: bold;
 }
 .mark {
-  background-color:aquamarine ;
+  background-color:	rgb(255, 255, 255);
+  border-radius: 8px;
   color: black;
   width: 10%;
   font-weight: bold;
 }
+.card {
+  font-family: 'Roboto', sans-serif;
+  font-size: 110%;
+  font-weight: bold;
+  color: rgb(0, 63, 54);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  background-color:	rgb(255, 223, 219);
+  border-radius: 8px;
+  box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+    rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+  margin: 60px auto;
+  padding: 2%;
+  width: 70vw;
+  margin-bottom: 5%;
+}
 
+
+a :hover{
+  transform:scale(1.0);
+  text-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+  rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+}

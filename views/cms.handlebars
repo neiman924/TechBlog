@@ -9,11 +9,7 @@
   {{#each comments as |comment| }}
     <div class="row mb-4 project">
       <div class="col-md-12">
-          <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-        
-          <h6>Posted by: {{comment.name}} on {{format_date comment.date_created}}</h6>
-        
-          <span class="col-md-12">{{comment.comment}}</span>
+        <h6 class="col-md-2" style="display: inline;">{{get_emoji}}{{comment.comment}} <p style="color: red;display: inline;">|</p> Posted by: {{comment.name}} on {{format_date comment.date_created}}</h6>
       </div>
       <div class="col-md-7">
         <p>
