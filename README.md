@@ -27,11 +27,11 @@ npm i -> create db: mysql>> source db/schema.sql; >> node seeds/seed.js >> npm s
 ## usage
 AS A developer who writes about tech I WANT a CMS-style blog site SO THAT I can publish articles, blog posts, and my thoughts and opinions
     ## screenshot
-    ![alt text](./assets/s1.png)
-    ![alt text](./assets/s2.png)
-    ![alt text](./assets/s3.png)
-    ![alt text](./assets/s4.png)
-    ![alt text](./assets/s5.png)
+    ![alt text](https://raw.githubusercontent.com/neiman924/TechBlog/main/Assets/s1.png)
+    ![alt text](https://raw.githubusercontent.com/neiman924/TechBlog/main/Assets/s2.png)
+    ![alt text](https://raw.githubusercontent.com/neiman924/TechBlog/main/Assets/s3.png)
+    ![alt text](https://raw.githubusercontent.com/neiman924/TechBlog/main/Assets/s4.png)
+    ![alt text](https://raw.githubusercontent.com/neiman924/TechBlog/main/Assets/s5.png)
  
 ## credits
 none
